@@ -19,8 +19,15 @@ function criarGrafico(data, layout){
     Plotly.newPlot(grafico, data, layout)
 }
 
+function incluirTexto(texto) {
+    const container = document.getElementById('graficos-container')
+    const paragrafo = document.createElement('p')
+    paragrafo.classList.add('graficos-container__texto')
+    paragrafo.innerHTML = texto
+    container.appendChild(paragrafo)
+}
+
+window.incluirTexto = incluirTexto
 window.criarGrafico = criarGrafico
-
 window.tickConfig = tickConfig
-
-window.getCSS = getCSS;
+window.getCSS = getCSS
